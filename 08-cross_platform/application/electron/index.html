@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!--
+    'unsafe-eval' is required because of a Chrome bug(?) that disallows
+    loading WASM from 'self'.
+    
+    https://github.com/anderejd/electron-wasm-rust-example/issues/6
+    https://github.com/WebAssembly/content-security-policy/issues/7
+    https://bugs.chromium.org/p/chromium/issues/detail?id=948834&can=1&q=wasm-eval
+    
+    https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP 
+  -->
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' app: 'unsafe-eval'; object-src 'self' app:;">
+  <meta http-equiv="X-Content-Security-Policy" content="script-src 'self' app: 'unsafe-eval'; object-src 'self' app:;">
+  <title>Hello World!</title>
+</head>
+
+<body>
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <h1 id="title">Hello World!</h1>
+    <span>
+      We are using Node.js <span id="node-version"></span>,
+      Chromium <span id="chrome-version"></span>,
+      and Electron <span id="electron-version"></span>.
+    </span>
+    <button id="invoke">Invoke Native</button>
+  </div>
+
+  <!-- You can also require other files to run in this process -->
+  <script src="./AlgorithmSDK.js"></script>
+  <script src="./renderer.js"></script>
+</body>
+
+</html>

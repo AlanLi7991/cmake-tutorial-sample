@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World!</title>
+</head>
+
+<body>
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <h1 id="title">Hello World!</h1>
+    <button onclick="onButtonClick()">Invoke Native</button>
+  </div>
+</body>
+<script src="./AlgorithmSDK.js"></script>
+<script>
+  function onButtonClick() {
+    var sdk = new Module.SDKWebAssembly()
+    sdk.invokeAlgorithmFunc(5, (code, message) => {
+      document.getElementById("title").innerText = code + ": " + message
+    })
+    sdk.delete()
+  }
+</script>
+
+</html>

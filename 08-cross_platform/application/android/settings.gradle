@@ -1,0 +1,4 @@
+include ':app', ':sdk'
+rootProject.name='Render'
+
+project(':sdk').projectDir = new File(rootDir.path, "../../wrapper/JNI/sdk")

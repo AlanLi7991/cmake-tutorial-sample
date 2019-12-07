@@ -1,0 +1,47 @@
+Private/
+.DS_Store/
+
+# 08-Cross
+**/build*/
+!build.sh
+**/emsdk
+**/node_modules
+**/wrapper/WebAssembly
+**/wrapper/Xcode
+AlgorithmSDK*.*
+
+
+
+# Xcode (from gitignore.io)
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+
+# CocoaPod
+Pods/*
+
+# others
+*.swp
+!.gitkeep
+.DS_Store
+
+# Android
+*.iml
+.gradle
+local.properties
+.idea
+captures
+.externalNativeBuild
+.cxx
