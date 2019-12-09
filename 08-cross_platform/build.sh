@@ -59,12 +59,12 @@ echo "
 EMSDK_GIT="$ROOT_DIR/emsdk"
 if [ -d $EMSDK_GIT ] 
 then
-    $EMSDK_GIT/emsdk update-tags
+    python $EMSDK_GIT/emsdk.py update-tags
 else
     git clone https://github.com/emscripten-core/emsdk.git $EMSDK_GIT
-    $EMSDK_GIT/emsdk install latest
+    python $EMSDK_GIT/emsdk.py install latest
 fi
-$EMSDK_GIT/emsdk activate latest
+python $EMSDK_GIT/emsdk.py activate latest
 
 echo "
 # -------------------------------------------- #
@@ -92,7 +92,7 @@ echo "
 # -------------------------------------------- #
 echo "
 # -------------------------------------------- #
-# -------------------------------------------- #
+# ------------Must Read Below----------------- #
 # -------------------------------------------- #
 
 SET UP END:
@@ -129,7 +129,7 @@ Desktop Platform (Electron) & Web Platform:
 9. Run web use \"cd ./application/web && sh build.sh\"
 
 # -------------------------------------------- #
-# -------------------------------------------- #
+# -------------Must Read Above---------------- #
 # -------------------------------------------- #
 " 
 
