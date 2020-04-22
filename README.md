@@ -75,4 +75,4 @@ SET UP END:
 
 ## Documents
 
-The documents have publiced on [my blog](http://alanli7991.github.io) and written by Chinese.
+The documents have publicized on [my blog](http://alanli7991.github.io) and written by Chinese.
