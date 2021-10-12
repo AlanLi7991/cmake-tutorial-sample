@@ -6,6 +6,6 @@
     "start": "electron ."
   },
   "devDependencies": {
-    "electron": "^7.1.2"
+    "electron": "^11.5.0"
   }
 }
